@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Firefighter Standards</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="mbfd_Ruq_icon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/modernizr.js -->
+  <script src="scripts/modernizr.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <!-- endbuild -->
+</head>
+<body ng-app="myApp">
+  <div class="container nav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="#/!" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#!fire" class="nav-link">FIRE</a>
+      </li>
+      <li class="nav-item">
+        <a href="#!emt" class="nav-link">EMT</a>
+      </li>
+      <li class="nav-item">
+        <a href="#!about" class="nav-link">About</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="column left">
+      <!-- blank area -->
+    </div>
+
+    <main class="column middle">
+      <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+      <div class="container">
+
+
+        <div ng-view></div>
+
+        <script>
+          var app = angular.module("myApp", ["ngRoute"]);
+          app.config(function ($routeProvider) {
+            $routeProvider
+              .when("/", {
+                templateUrl: "main.htm"
+
+              })
+              .when("/fire", {
+                templateUrl: "fire.htm"
+              })
+              .when("/emt", {
+                templateUrl: "emt.htm"
+              })
+              .when("/about", {
+                templateUrl: "about.htm"
+              });
+          });
+        </script>
+
+
+      </div>
+
+      <!-- build:js scripts/vendor.js -->
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- endbuild -->
+      <!-- build:js scripts/main.js -->
+      <script src="scripts/main.js"></script>
+      <!-- endbuild -->
+
+
+    </main>
+
+    <div class="column right">
+      <p>
+        <a href="https://www.vitcofire.com/"> Click Here for VITCO fire equipment</a>
+      </p> <br />
+      <a id="nfpa" href="https://www.nfpa.org/"><img src="images/nfpa.png" alt="nfpa" style="width:250px;height:280px;"></a> <br />
+      <br />
+      <a id="niosh" href="https://www.cdc.gov/niosh/index.htm"><img src="images/niosh.png" alt="niosh" style="width:300px;height:103px;"></a>
+    </div>
+  </div>
+  <div class="footer">
+    <pre>Duncan Siror
+ITEC 4366
+Advanced Web Development
+Summer 2020</pre>
+  </div>
+
+
+
+</body>
+</html>
